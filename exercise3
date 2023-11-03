@@ -1,0 +1,32 @@
+import "./App.css";
+import { useState } from 'react';
+
+function App() {
+  const [count, setCount] = useState(0);
+
+  const increaseNumber = () => {
+    setCount(count+1);
+  }
+
+  const decreaseNumber = () => {
+    setCount(count-1);
+  }
+
+  const setZero = () => {
+    setCount(0);
+  }
+
+  return(
+    <div className="App">
+      <button onClick={increaseNumber}>Increase</button>
+      <button onClick={decreaseNumber}>Descrese</button>
+      <button onClick={setZero}>Set to Zero</button>
+
+      {count}
+    </div>
+  );
+}
+
+
+
+export default App
